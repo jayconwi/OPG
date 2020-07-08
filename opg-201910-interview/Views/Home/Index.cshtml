@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3>Client Id: @ViewData["ClientId"]</h3>
+            </div>
+            <div class="col-12">
+                <code>
+                    [ <br />
+                        @foreach (Newtonsoft.Json.Linq.JToken clientFile in ViewData.Model as Newtonsoft.Json.Linq.JArray)
+                        {
+                            @clientFile <br />
+                        }
+                    ]
+                </code>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+
